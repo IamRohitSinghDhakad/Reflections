@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (5.7.1)
+  - iOSDropDown (0.4.0)
+  - IQKeyboardManagerSwift (6.5.12)
+  - SDWebImage/Core (5.16.0)
+  - SDWebImage/MapKit (5.16.0):
+    - SDWebImage/Core
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - iOSDropDown
+  - IQKeyboardManagerSwift
+  - SDWebImage/MapKit
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - iOSDropDown
+    - IQKeyboardManagerSwift
+    - SDWebImage
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
+  IQKeyboardManagerSwift: 371b08cb39664fb56030f5345c815a4ffc74bbc0
+  SDWebImage: 2aea163b50bfcb569a2726b6a754c54a4506fcf6
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 1411ecfa2ccc358eea21eea8e3d959042ac6d799
+
+COCOAPODS: 1.13.0
