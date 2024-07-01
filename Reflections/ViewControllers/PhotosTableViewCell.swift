@@ -27,6 +27,11 @@ class PhotosTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.vwPercentageOne.cornerRadius = self.vwPercentageOne.frame.height / 2
+        self.vwPercentageTwo.cornerRadius = self.vwPercentageTwo.frame.height / 2
+        self.vwPercentageThree.cornerRadius = self.vwPercentageThree.frame.height / 2
+        self.vwPerctageFour.cornerRadius = self.vwPerctageFour.frame.height / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

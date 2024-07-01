@@ -35,6 +35,10 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func btnOnSignUp(_ sender: Any) {
+        
+    }
+    
     @IBAction func btnOnNext(_ sender: Any) {
         self.vwPassword.isHidden = false
         self.vwForgotPassword.isHidden = false

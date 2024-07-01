@@ -279,10 +279,44 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJw-UW-xs0">
+                                                <rect key="frame" x="20" y="515" width="280" height="35"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account Signup Now!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ad-OV-8fg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="35"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCa-rx-xuc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="35"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="btnOnSignUp:" destination="nVQ-7w-AAA" eventType="touchUpInside" id="Yl2-k8-Zqe"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="6ad-OV-8fg" secondAttribute="trailing" id="8r3-2a-lDy"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6ad-OV-8fg" secondAttribute="bottom" id="9j6-TF-Xkm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="zCa-rx-xuc" secondAttribute="bottom" id="EjT-Nt-yoU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zCa-rx-xuc" secondAttribute="trailing" id="OUN-Le-iRo"/>
+                                                    <constraint firstItem="6ad-OV-8fg" firstAttribute="leading" secondItem="CJw-UW-xs0" secondAttribute="leading" id="Usm-QB-K7G"/>
+                                                    <constraint firstItem="zCa-rx-xuc" firstAttribute="top" secondItem="CJw-UW-xs0" secondAttribute="top" id="Xmd-eo-RLY"/>
+                                                    <constraint firstAttribute="height" constant="35" id="bvH-ob-f09"/>
+                                                    <constraint firstItem="zCa-rx-xuc" firstAttribute="leading" secondItem="CJw-UW-xs0" secondAttribute="leading" id="feh-pB-CC0"/>
+                                                    <constraint firstItem="6ad-OV-8fg" firstAttribute="top" secondItem="CJw-UW-xs0" secondAttribute="top" id="uiH-sB-v3d"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="CJw-UW-xs0" secondAttribute="bottom" constant="18" id="6jA-Ps-MX8"/>
+                                            <constraint firstItem="CJw-UW-xs0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1b4-si-440" secondAttribute="bottom" constant="20" id="6tv-9X-VZk"/>
                                             <constraint firstItem="jPA-DX-Je8" firstAttribute="top" secondItem="jW9-Rn-dR7" secondAttribute="top" constant="30" id="Bfi-iq-ZhC"/>
+                                            <constraint firstItem="CJw-UW-xs0" firstAttribute="leading" secondItem="jW9-Rn-dR7" secondAttribute="leading" constant="20" id="EHz-Wu-zDE"/>
+                                            <constraint firstAttribute="trailing" secondItem="CJw-UW-xs0" secondAttribute="trailing" constant="20" id="Iiw-YW-NYQ"/>
                                             <constraint firstItem="1b4-si-440" firstAttribute="leading" secondItem="jW9-Rn-dR7" secondAttribute="leading" constant="20" id="Nlu-t3-dt1"/>
                                             <constraint firstItem="jPA-DX-Je8" firstAttribute="centerX" secondItem="jW9-Rn-dR7" secondAttribute="centerX" id="fgp-q1-wq8"/>
                                             <constraint firstAttribute="trailing" secondItem="1b4-si-440" secondAttribute="trailing" constant="20" id="jZo-0b-2tt"/>
@@ -425,9 +459,13 @@
                                     <constraint firstItem="99j-c1-WbH" firstAttribute="leading" secondItem="tRY-rj-YSN" secondAttribute="leading" id="w8H-LU-amT"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mlL-SO-5qn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mlL-SO-5qn">
                                 <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ybt-r2-DHn" id="Sob-1i-zfi"/>
+                                    <outlet property="delegate" destination="Ybt-r2-DHn" id="Dyz-gU-fo6"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HcR-xD-DiJ"/>
