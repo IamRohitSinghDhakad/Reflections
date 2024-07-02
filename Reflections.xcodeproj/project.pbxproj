@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A838F522C34034D001CA1F1 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A838F512C34034D001CA1F1 /* PhotoListViewController.swift */; };
+		0A838F552C3405EF001CA1F1 /* PhotoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A838F542C3405EF001CA1F1 /* PhotoListTableViewCell.xib */; };
+		0A838F562C3405EF001CA1F1 /* PhotoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A838F532C3405EF001CA1F1 /* PhotoListTableViewCell.swift */; };
+		0A838F582C340CA4001CA1F1 /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A838F572C340CA4001CA1F1 /* AddImageViewController.swift */; };
 		62881BB018F6E9EDFE3E220D /* Pods_Reflections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 211259BBF9DEA41BB43F7FC7 /* Pods_Reflections.framework */; };
 		F9665EE52C30399700B3473B /* PhotosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9665EE42C30399700B3473B /* PhotosTableViewCell.xib */; };
 		F9665EE62C30399700B3473B /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9665EE32C30399700B3473B /* PhotosTableViewCell.swift */; };
@@ -42,6 +46,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A838F512C34034D001CA1F1 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		0A838F532C3405EF001CA1F1 /* PhotoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListTableViewCell.swift; sourceTree = "<group>"; };
+		0A838F542C3405EF001CA1F1 /* PhotoListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoListTableViewCell.xib; sourceTree = "<group>"; };
+		0A838F572C340CA4001CA1F1 /* AddImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageViewController.swift; sourceTree = "<group>"; };
 		211259BBF9DEA41BB43F7FC7 /* Pods_Reflections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reflections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		944D4BC98DFE242C3689F175 /* Pods-Reflections.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reflections.debug.xcconfig"; path = "Target Support Files/Pods-Reflections/Pods-Reflections.debug.xcconfig"; sourceTree = "<group>"; };
 		B05EC7B8694AD84CAE118EC0 /* Pods-Reflections.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reflections.release.xcconfig"; path = "Target Support Files/Pods-Reflections/Pods-Reflections.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +218,10 @@
 				F9D6FA162C30130F003AFFAE /* HomeViewController.swift */,
 				F9665EE32C30399700B3473B /* PhotosTableViewCell.swift */,
 				F9665EE42C30399700B3473B /* PhotosTableViewCell.xib */,
+				0A838F512C34034D001CA1F1 /* PhotoListViewController.swift */,
+				0A838F532C3405EF001CA1F1 /* PhotoListTableViewCell.swift */,
+				0A838F542C3405EF001CA1F1 /* PhotoListTableViewCell.xib */,
+				0A838F572C340CA4001CA1F1 /* AddImageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -278,6 +290,7 @@
 				F9D6FA092C300E26003AFFAE /* Assets.xcassets in Resources */,
 				F9D6FA0C2C300E26003AFFAE /* Base in Resources */,
 				F9665F0E2C303EEC00B3473B /* century.ttf in Resources */,
+				0A838F552C3405EF001CA1F1 /* PhotoListTableViewCell.xib in Resources */,
 				F9D6FA072C300E24003AFFAE /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A838F582C340CA4001CA1F1 /* AddImageViewController.swift in Sources */,
 				F9665F092C303EEC00B3473B /* NetworkRequest.swift in Sources */,
 				F9665F0A2C303EEC00B3473B /* WebServiceHelper.swift in Sources */,
 				F9665EE62C30399700B3473B /* PhotosTableViewCell.swift in Sources */,
@@ -354,6 +368,8 @@
 				F9665F0D2C303EEC00B3473B /* AlertViewController.swift in Sources */,
 				F9665F172C303EEC00B3473B /* TimePickerManager.swift in Sources */,
 				F9665F0B2C303EEC00B3473B /* WebServiceManager.swift in Sources */,
+				0A838F522C34034D001CA1F1 /* PhotoListViewController.swift in Sources */,
+				0A838F562C3405EF001CA1F1 /* PhotoListTableViewCell.swift in Sources */,
 				F9D6FA002C300E24003AFFAE /* AppDelegate.swift in Sources */,
 				F9665F072C303EEC00B3473B /* UserModel.swift in Sources */,
 				F9665F162C303EEC00B3473B /* TableViewExtension.swift in Sources */,

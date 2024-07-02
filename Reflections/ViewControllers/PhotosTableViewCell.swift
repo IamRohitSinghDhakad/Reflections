@@ -23,6 +23,12 @@ class PhotosTableViewCell: UITableViewCell {
     @IBOutlet weak var vwPerctageFour: UIView!
     @IBOutlet weak var lblPercentageFour: UILabel!
     
+    @IBOutlet weak var btnOne: UIButton!
+    @IBOutlet weak var btnTwo: UIButton!
+    @IBOutlet weak var btnThree: UIButton!
+    @IBOutlet weak var btnFour: UIButton!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

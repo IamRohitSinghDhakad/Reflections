@@ -1,56 +1,54 @@
 //
-//  HomeViewController.swift
+//  PhotoListViewController.swift
 //  Reflections
 //
-//  Created by Rohit SIngh Dhakad on 29/06/24.
+//  Created by Dhakad, Rohit Singh (Cognizant) on 02/07/24.
 //
 
 import UIKit
+import Swift
 
-class HomeViewController: UIViewController {
-    
-    @IBOutlet weak var imgVeHeaderButton: UIImageView!
-    @IBOutlet weak var tblVw: UITableView!
+class PhotoListViewController: UIViewController {
+
+    @IBOutlet weak var tblList: UITableView!
     @IBOutlet weak var vwImage: UIView!
     @IBOutlet weak var imgVw: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.vwImage.isHidden = true
-        // Do any additional setup after loading the view.
-        
-        let nib = UINib(nibName: "PhotosTableViewCell", bundle: nil)
-        self.tblVw.register(nib, forCellReuseIdentifier: "PhotosTableViewCell")
-        
+        let nib = UINib(nibName: "PhotoListTableViewCell", bundle: nil)
+        self.tblList.register(nib, forCellReuseIdentifier: "PhotoListTableViewCell")
     }
     
-    @IBAction func btnOnLogout(_ sender: Any) {
-        
-    }
-    
-    @IBAction func btnOnLoginAndHome(_ sender: Any) {
-        pushVc(viewConterlerId: "PhotoListViewController")
-        
-    }
-    
-    @IBAction func btnCloseImageView(_ sender: Any) {
+    @IBAction func btnCloseVw(_ sender: Any) {
         self.vwImage.isHidden = true
     }
+    
+    @IBAction func btnAddImage(_ sender: Any) {
+        pushVc(viewConterlerId: "AddImageViewController")
+    }
+    
+    @IBAction func btnOnBack(_ sender: Any) {
+        onBackPressed()
+    }
+    
 }
 
-extension HomeViewController:UITableViewDataSource,UITableViewDelegate {
+extension PhotoListViewController:UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotosTableViewCell", for: indexPath)as! PhotosTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoListTableViewCell", for: indexPath)as! PhotoListTableViewCell
         
         
         cell.btnOne.tag = indexPath.row
-        cell.btnTwo.tag = indexPath.row
-        cell.btnThree.tag = indexPath.row
+        cell.btntwo.tag = indexPath.row
+        cell.btnThre.tag = indexPath.row
         cell.btnFour.tag = indexPath.row
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector (tap))
@@ -60,12 +58,12 @@ extension HomeViewController:UITableViewDataSource,UITableViewDelegate {
         
         tapGesture.numberOfTapsRequired = 2
         cell.btnOne.addGestureRecognizer(tapGesture)
-        cell.btnTwo.addGestureRecognizer(tapGesture)
-        cell.btnThree.addGestureRecognizer(tapGesture)
+        cell.btntwo.addGestureRecognizer(tapGesture)
+        cell.btnThre.addGestureRecognizer(tapGesture)
         cell.btnFour.addGestureRecognizer(tapGesture)
         cell.btnOne.addGestureRecognizer(longPress)
-        cell.btnTwo.addGestureRecognizer(longPress)
-        cell.btnThree.addGestureRecognizer(longPress)
+        cell.btntwo.addGestureRecognizer(longPress)
+        cell.btnThre.addGestureRecognizer(longPress)
         cell.btnFour.addGestureRecognizer(longPress)
         
         return cell
