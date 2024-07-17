@@ -12,6 +12,8 @@
 		0A838F562C3405EF001CA1F1 /* PhotoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A838F532C3405EF001CA1F1 /* PhotoListTableViewCell.swift */; };
 		0A838F582C340CA4001CA1F1 /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A838F572C340CA4001CA1F1 /* AddImageViewController.swift */; };
 		62881BB018F6E9EDFE3E220D /* Pods_Reflections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 211259BBF9DEA41BB43F7FC7 /* Pods_Reflections.framework */; };
+		F9012D4A2C47FFD800D6D65B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9012D492C47FFD800D6D65B /* DetailViewController.swift */; };
+		F9012D4C2C48374800D6D65B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9012D4B2C48374800D6D65B /* WebViewController.swift */; };
 		F9665EE52C30399700B3473B /* PhotosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9665EE42C30399700B3473B /* PhotosTableViewCell.xib */; };
 		F9665EE62C30399700B3473B /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9665EE32C30399700B3473B /* PhotosTableViewCell.swift */; };
 		F9665F022C303EEC00B3473B /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9665EE72C303EEC00B3473B /* AnswerModel.swift */; };
@@ -36,6 +38,7 @@
 		F9665F152C303EEC00B3473B /* RDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9665EFE2C303EEC00B3473B /* RDTextView.swift */; };
 		F9665F162C303EEC00B3473B /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9665EFF2C303EEC00B3473B /* TableViewExtension.swift */; };
 		F9665F172C303EEC00B3473B /* TimePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9665F002C303EEC00B3473B /* TimePickerManager.swift */; };
+		F98C256F2C417ABC00A50A0F /* ForgotPssswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98C256E2C417ABC00A50A0F /* ForgotPssswordViewController.swift */; };
 		F9D6FA002C300E24003AFFAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6F9FF2C300E24003AFFAE /* AppDelegate.swift */; };
 		F9D6FA042C300E24003AFFAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6FA032C300E24003AFFAE /* ViewController.swift */; };
 		F9D6FA072C300E24003AFFAE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F9D6FA062C300E24003AFFAE /* Base */; };
@@ -53,6 +56,8 @@
 		211259BBF9DEA41BB43F7FC7 /* Pods_Reflections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reflections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		944D4BC98DFE242C3689F175 /* Pods-Reflections.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reflections.debug.xcconfig"; path = "Target Support Files/Pods-Reflections/Pods-Reflections.debug.xcconfig"; sourceTree = "<group>"; };
 		B05EC7B8694AD84CAE118EC0 /* Pods-Reflections.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reflections.release.xcconfig"; path = "Target Support Files/Pods-Reflections/Pods-Reflections.release.xcconfig"; sourceTree = "<group>"; };
+		F9012D492C47FFD800D6D65B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F9012D4B2C48374800D6D65B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		F9665EE32C30399700B3473B /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 		F9665EE42C30399700B3473B /* PhotosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosTableViewCell.xib; sourceTree = "<group>"; };
 		F9665EE72C303EEC00B3473B /* AnswerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 		F9665EFE2C303EEC00B3473B /* RDTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDTextView.swift; sourceTree = "<group>"; };
 		F9665EFF2C303EEC00B3473B /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		F9665F002C303EEC00B3473B /* TimePickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerManager.swift; sourceTree = "<group>"; };
+		F98C256E2C417ABC00A50A0F /* ForgotPssswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPssswordViewController.swift; sourceTree = "<group>"; };
 		F9D6F9FC2C300E24003AFFAE /* Reflections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reflections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D6F9FF2C300E24003AFFAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9D6FA032C300E24003AFFAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +228,9 @@
 				0A838F532C3405EF001CA1F1 /* PhotoListTableViewCell.swift */,
 				0A838F542C3405EF001CA1F1 /* PhotoListTableViewCell.xib */,
 				0A838F572C340CA4001CA1F1 /* AddImageViewController.swift */,
+				F98C256E2C417ABC00A50A0F /* ForgotPssswordViewController.swift */,
+				F9012D492C47FFD800D6D65B /* DetailViewController.swift */,
+				F9012D4B2C48374800D6D65B /* WebViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -346,6 +355,7 @@
 			files = (
 				0A838F582C340CA4001CA1F1 /* AddImageViewController.swift in Sources */,
 				F9665F092C303EEC00B3473B /* NetworkRequest.swift in Sources */,
+				F98C256F2C417ABC00A50A0F /* ForgotPssswordViewController.swift in Sources */,
 				F9665F0A2C303EEC00B3473B /* WebServiceHelper.swift in Sources */,
 				F9665EE62C30399700B3473B /* PhotosTableViewCell.swift in Sources */,
 				F9665F0F2C303EEC00B3473B /* CircularProgressBar.swift in Sources */,
@@ -358,10 +368,12 @@
 				F9665F102C303EEC00B3473B /* CustomUITextField.swift in Sources */,
 				F9665F122C303EEC00B3473B /* Extensions.swift in Sources */,
 				F9665F152C303EEC00B3473B /* RDTextView.swift in Sources */,
+				F9012D4C2C48374800D6D65B /* WebViewController.swift in Sources */,
 				F9665F0C2C303EEC00B3473B /* FloatRatingView.swift in Sources */,
 				F9665F112C303EEC00B3473B /* CustomUIView.swift in Sources */,
 				F9665F052C303EEC00B3473B /* QuizQuestionsModel.swift in Sources */,
 				F9665F032C303EEC00B3473B /* HomeModel.swift in Sources */,
+				F9012D4A2C47FFD800D6D65B /* DetailViewController.swift in Sources */,
 				F9D6FA042C300E24003AFFAE /* ViewController.swift in Sources */,
 				F9665F042C303EEC00B3473B /* QuestionModel.swift in Sources */,
 				F9665F062C303EEC00B3473B /* ResultModel.swift in Sources */,

@@ -9,22 +9,13 @@ import UIKit
 
 class HomeModel: NSObject {
     
-    var brand: String?
-    var days_remaining_for_next_service: String?
-    var entrydt: String?
-    var hsn: String?
-    var kraftstoffart: String?
-    var last_service_date: String?
-    var carModel: String?
-    var next_service_date : String?
-    var registration : String?
-    var tsn : String?
-    var variant: String?
-    var user_id: String?
-    var vehicle_id: String?
-    var year: String?
-    
-    
+    var total_votes: String?
+    var total_images : String?
+    var purpose_name: String?
+    var status : String?
+    var user_id : String?
+    var album_no: String?
+    var arrImages = [ImagesModel]()
     
     init(from dictionary: [String: Any]) {
         super.init()
@@ -35,61 +26,81 @@ class HomeModel: NSObject {
             user_id = "\(value)"
         }
         
-        if let value = dictionary["brand"] as? String {
-            brand = value
+        if let value = dictionary["total_votes"] as? String {
+            total_votes = value
+        }else if let value = dictionary["total_votes"] as? Int {
+            total_votes = "\(value)"
         }
         
-        if let value = dictionary["days_remaining_for_next_service"] as? String {
-            days_remaining_for_next_service = value
+        if let value = dictionary["total_images"] as? String {
+            total_images = value
+        }else if let value = dictionary["total_images"] as? Int {
+            total_images = "\(value)"
         }
         
         //============//
         
-        if let value = dictionary["entrydt"] as? String {
-            entrydt = value
+        if let value = dictionary["status"] as? String {
+            status = value
         }
         
-        if let value = dictionary["hsn"] as? String {
-            hsn = value
+        if let value = dictionary["purpose_name"] as? String {
+            purpose_name = value
         }
         
-        if let value = dictionary["last_service_date"] as? String {
-            last_service_date = value
+        if let value = dictionary["album_no"] as? Int {
+            album_no = "\(value)"
+        }else if let value = dictionary["album_no"] as? String {
+            album_no = value
         }
         
-        if let value = dictionary["kraftstoffart"] as? String {
-            kraftstoffart = value
+        if let arrImages = dictionary["images"]as? [[String: Any]]{
+            for data in arrImages{
+                let obj = ImagesModel(from: data)
+                self.arrImages.append(obj)
+            }
+        }
+    }
+}
+
+class ImagesModel: NSObject {
+    
+    var imageUrl = String()
+    var image_id : String?
+    var perecentage : String?
+    var total_votes : String?
+    var voted : String?
+    var purposeName : String?
+    
+    init(from dictionary: [String: Any]) {
+        super.init()
+        
+        if let value = dictionary["image_id"] as? String {
+            image_id = value
+        }else if let value = dictionary["image_id"] as? Int {
+            image_id = "\(value)"
         }
         
-        if let value = dictionary["model"] as? String {
-            carModel = value
+        if let value = dictionary["perecentage"] as? String {
+            perecentage = value
+        }else if let value = dictionary["perecentage"] as? Int {
+            perecentage = "\(value)"
         }
         
-        if let value = dictionary["next_service_date"] as? String {
-            next_service_date = value
+        if let value = dictionary["total_votes"] as? String {
+            total_votes = value
+        }else if let value = dictionary["total_votes"] as? Int {
+            total_votes = "\(value)"
         }
         
-        if let value = dictionary["registration"] as? String {
-            registration = value
+        if let value = dictionary["voted"] as? String {
+            voted = value
+        }else if let value = dictionary["voted"] as? Int {
+            voted = "\(value)"
         }
         
-        if let value = dictionary["tsn"] as? String {
-            tsn = value
+        if let value = dictionary["image"] as? String {
+            imageUrl = value
         }
-        
-        if let value = dictionary["variant"] as? String {
-            variant = value
-        }
-        
-        if let value = dictionary["vehicle_id"] as? Int {
-            vehicle_id = "\(value)"
-        }else if let value = dictionary["vehicle_id"] as? String {
-            vehicle_id = value
-        }
-        
-        if let value = dictionary["year"] as? String {
-            year = value
-        }
-        
     }
 }

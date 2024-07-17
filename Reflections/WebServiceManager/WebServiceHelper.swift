@@ -10,8 +10,7 @@ import UIKit
 
 
 
-//let BASE_URL = "https://ambitious.in.net/Arun/alashkar/index.php/api/"//Local
-let BASE_URL = "https://alashkarapp.de/index.php/api/"//Live
+let BASE_URL = "https://ambitious.in.net/Shubham/reflections/index.php/api/"//Local
 
 
 struct WsUrl{
@@ -21,34 +20,15 @@ struct WsUrl{
     static let url_getUserProfile  = BASE_URL + "get_profile"
     static let url_Login  = BASE_URL + "login"
     static let url_ForgotPassword = BASE_URL + "forgot_password"
-    static let url_ContactUs = BASE_URL + "contact_us"
-    static let url_AddVehicle = BASE_URL + "add_vehicle"
-    static let url_DeleteVehicle = BASE_URL + "vehicle_delete"
+    static let url_CheckProfile = BASE_URL + "check_profile"
+    static let url_GetPurposes = BASE_URL + "get_purposes"
+    static let url_GetUserImages = BASE_URL + "get_user_images"
     static let url_Privacy = BASE_URL + "page/Privacy"
     static let url_About = BASE_URL + "page/About"
-    static let url_UpdateProfile = BASE_URL + "update_profile"
+    static let url_AddUserImage = BASE_URL + "add_user_images"
+    static let url_deleteAlbum = BASE_URL + "delete_user_image"
+    static let url_VoteImage = BASE_URL + "save_in_favorite"
     
-    
-//    static let url_GetCategory = BASE_URL + "get_category"
-//    static let url_GetSubCategory = BASE_URL + "get_sub_category"
-//    static let url_getQuestion = BASE_URL + "get_question"
-//    static let url_GetEvent = BASE_URL + "get_events"
-//    static let url_GetArticle = BASE_URL + "get_article"
-//
-//    static let url_GetLikedPost = BASE_URL + "get_liked_posts"
-//    static let url_LikePost = BASE_URL + "like_post"
-//    static let url_DeleteNotification = BASE_URL + "delete_notification"
-//    static let url_GetNotofication = BASE_URL + "get_notification"
-//    static let url_UpdateAppointment = BASE_URL + "update_appointment"
-//    static let url_GetStore = BASE_URL + "get_stores"
-//    static let url_GetQuizQuestions = BASE_URL + "get_quiz?category_id="
-//    static let url_SubmitQuizAnswers = BASE_URL + "submit_quiz_answer"
-//    static let url_GetTopic = BASE_URL + "get_topic"
-//    static let url_GetQuizScore = BASE_URL + "get_quiz_score?quiz_code="
-//    static let url_SaveInFavouriteSubCategory = BASE_URL + "save_in_favorite?type=sub_category"
-//    static let url_SaveInFavouriteTopic = BASE_URL + "save_in_favorite?type=topic"
-//    static let url_CategorySuggestion = BASE_URL + "category_suggestion"
-
 }
 
 

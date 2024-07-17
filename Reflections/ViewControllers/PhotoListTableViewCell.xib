@@ -42,8 +42,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtk-wO-33w">
                                         <rect key="frame" x="0.0" y="0.0" width="101.66666666666667" height="96.666666666666671"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="w9N-tc-X39">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="w9N-tc-X39">
                                                 <rect key="frame" x="0.0" y="0.0" width="101.66666666666667" height="96.666666666666671"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iff-tq-QS9">
                                                 <rect key="frame" x="75.666666666666671" y="70.666666666666657" width="25" height="25"/>
@@ -87,8 +92,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXM-Rl-LeX">
                                         <rect key="frame" x="106.66666666666669" y="0.0" width="102" height="96.666666666666671"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="oEg-w1-Cga">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="oEg-w1-Cga">
                                                 <rect key="frame" x="0.0" y="0.0" width="102" height="96.666666666666671"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyC-Rt-gHY">
                                                 <rect key="frame" x="75.999999999999986" y="70.666666666666657" width="25" height="25"/>
@@ -132,8 +142,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHm-UC-Q5j">
                                         <rect key="frame" x="213.66666666666666" y="0.0" width="101.66666666666666" height="96.666666666666671"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="OSi-Ro-IWx">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="OSi-Ro-IWx">
                                                 <rect key="frame" x="0.0" y="0.0" width="101.66666666666667" height="96.666666666666671"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fev-H6-SgO">
                                                 <rect key="frame" x="75.666666666666657" y="70.666666666666657" width="25" height="25"/>
@@ -174,8 +189,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDC-Ll-ll9">
                                         <rect key="frame" x="320.33333333333331" y="0.0" width="101.66666666666669" height="96.666666666666671"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="twz-WM-jBe">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="twz-WM-jBe">
                                                 <rect key="frame" x="0.0" y="0.0" width="101.66666666666667" height="96.666666666666671"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spf-Nc-TH0">
                                                 <rect key="frame" x="75.666666666666686" y="70.666666666666657" width="25" height="25"/>
@@ -250,6 +270,11 @@
                             <constraint firstAttribute="trailing" secondItem="1b6-Ih-VmN" secondAttribute="trailing" constant="10" id="jFj-Qq-Sub"/>
                             <constraint firstItem="dp9-oT-4cW" firstAttribute="leading" secondItem="991-kS-rUO" secondAttribute="trailing" constant="1" id="xZJ-mW-cKt"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>

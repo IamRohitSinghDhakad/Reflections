@@ -26,7 +26,8 @@ class ViewController: UIViewController {
             counter -= 1
         }else{
             self.timer?.invalidate()
-            goToNextController()
+          //  goToNextController()
+            call_SignUp_Api()
             
         }
     }
@@ -51,6 +52,50 @@ class ViewController: UIViewController {
             let navController = UINavigationController(rootViewController: vc)
             navController.isNavigationBarHidden = true
             appDelegate.window?.rootViewController = navController
+        }
+    }
+    
+    func call_SignUp_Api(){
+        
+        if !objWebServiceManager.isNetworkAvailable(){
+            objWebServiceManager.hideIndicator()
+            objAlert.showAlert(message: "No Internet Connection", title: "Alert", controller: self)
+            return
+        }
+        
+        
+        print("DeviceID ----->>", UIDevice.current.identifierForVendor!.uuidString
+)
+        let dicrParam = ["device_id": UIDevice.current.identifierForVendor!.uuidString,
+                         "device_type":"iOS",
+                         "device_token":""]as [String:Any]
+        
+        objWebServiceManager.requestPost(strURL: WsUrl.url_SignUp, queryParams: [:], params: dicrParam, strCustomValidation: "", showIndicator: false) { (response) in
+            objWebServiceManager.hideIndicator()
+            
+            let status = (response["status"] as? Int)
+            let message = (response["message"] as? String)
+            print(response)
+            
+            if status == MessageConstant.k_StatusCode{
+                if let user_details  = response["result"] as? [String:Any] {
+                    
+                    objAppShareData.SaveUpdateUserInfoFromAppshareData(userDetail: user_details)
+                    objAppShareData.fetchUserInfoFromAppshareData()
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    let vc = (self.mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController)!
+                    let navController = UINavigationController(rootViewController: vc)
+                    navController.isNavigationBarHidden = true
+                    appDelegate.window?.rootViewController = navController
+                }
+            }else{
+                objWebServiceManager.hideIndicator()
+            }
+            
+            
+        } failure: { (Error) in
+            //  print(Error)
+            objWebServiceManager.hideIndicator()
         }
     }
     
