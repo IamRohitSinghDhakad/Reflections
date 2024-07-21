@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
         self.vwResendLink.isHidden = true
     }
     @IBAction func btnResendLink(_ sender: Any) {
-        
+        self.call_CheckProfile_Api(status: "1")
     }
     
     @IBAction func btnForgotPassword(_ sender: Any) {
@@ -64,12 +64,16 @@ class LoginViewController: UIViewController {
         
         if self.tfEmail.text == ""{
             objAlert.showAlert(message: "Please enter email first", controller: self)
-        }else{
+        }else if isValidEmail(self.tfEmail.text!) == false{
+            objAlert.showAlert(message: "Please enter valid email", controller: self)
+        }else {
             if self.isProfileExist == 0{
                 self.call_CheckProfile_Api(status: "0")
             }else if self.isProfileExist == 1{
                 if self.tfPassword.text == ""{
                     objAlert.showAlert(message: "Please enter password first", controller: self)
+                }else if isValidPassword(self.tfPassword.text!) == false{
+                    objAlert.showAlert(message: "Password must be at least 6 characters", controller: self)
                 }else{
                     self.call_SignUp_Api()
                 }
@@ -77,20 +81,29 @@ class LoginViewController: UIViewController {
             }else{
                 if self.tfPassword.text == ""{
                     objAlert.showAlert(message: "Please enter password first", controller: self)
+                }else if isValidPassword(self.tfPassword.text!) == false{
+                    objAlert.showAlert(message: "Password must be at least 6 characters", controller: self)
                 }else{
                     self.call_Login_Api()
                 }
                 
             }
         }
-            
-        
-    
-        
-       
-
         
     }
+    
+    
+    
+    func isValidEmail(_ email: String) -> Bool {
+            // Regular expression for validating an email
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+            let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+            return emailTest.evaluate(with: email)
+        }
+
+        func isValidPassword(_ password: String) -> Bool {
+            return password.count >= 6
+        }
     
     func call_CheckProfile_Api(status: String){
         
@@ -99,13 +112,13 @@ class LoginViewController: UIViewController {
             objAlert.showAlert(message: "No Internet Connection", title: "Alert", controller: self)
             return
         }
-        
+        objWebServiceManager.showIndicator()
         
         print("DeviceID ----->>", UIDevice.current.identifierForVendor!.uuidString
         )
         let dicrParam = ["email": self.tfEmail.text!,
                          "status":status]as [String:Any]
-        
+       
         objWebServiceManager.requestPost(strURL: WsUrl.url_CheckProfile, queryParams: [:], params: dicrParam, strCustomValidation: "", showIndicator: false) { (response) in
             objWebServiceManager.hideIndicator()
             
@@ -150,19 +163,19 @@ class LoginViewController: UIViewController {
             return
         }
         
-        if self.imgVwCheck.image == UIImage(named: "checkmark.square"){
+        if self.imgVwCheck.image == UIImage(systemName: "checkmark.square"){
             
         }
         else{
-                objAlert.showAlert(message: "Please read and accept the tearms and condition first", controller: self)
+            objAlert.showAlert(message: "Please read and accept the tearms and condition first", controller: self)
             return
-            }
+        }
         print("DeviceID ----->>", UIDevice.current.identifierForVendor!.uuidString
         )
         let dicrParam = ["email": self.tfEmail.text!,
                          "password":self.tfPassword.text!,
-                         "device_id":""]as [String:Any]
-        
+                         "device_id":UIDevice.current.identifierForVendor!.uuidString]as [String:Any]
+        objWebServiceManager.showIndicator()
         objWebServiceManager.requestPost(strURL: WsUrl.url_SignUp, queryParams: [:], params: dicrParam, strCustomValidation: "", showIndicator: false) { (response) in
             objWebServiceManager.hideIndicator()
             
@@ -172,6 +185,9 @@ class LoginViewController: UIViewController {
             
             if status == MessageConstant.k_StatusCode{
                 if let user_details  = response["result"] as? [String:Any] {
+                    
+                    objAppShareData.SaveUpdateUserInfoFromAppshareData(userDetail: user_details)
+                    objAppShareData.fetchUserInfoFromAppshareData()
                     self.vwResendLink.isHidden = false
                     self.call_CheckProfile_Api(status: "1")
                 }
@@ -197,19 +213,21 @@ class LoginViewController: UIViewController {
             return
         }
         
-        if self.imgVwCheck.image == UIImage(named: "checkmark.square"){
+        objWebServiceManager.showIndicator()
+        if self.imgVwCheck.image == UIImage(systemName: "checkmark.square"){
             
         }
         else{
-                objAlert.showAlert(message: "Please read and accept the tearms and condition first", controller: self)
+            objAlert.showAlert(message: "Please read and accept the tearms and condition first", controller: self)
+            objWebServiceManager.hideIndicator()
             return
-            }
+        }
         
         print("DeviceID ----->>", UIDevice.current.identifierForVendor!.uuidString
         )
         let dicrParam = ["email": self.tfEmail.text!,
-                         "password":self.tfPassword.text!,
-                         "device_id":UIDevice.current.identifierForVendor!.uuidString]as [String:Any]
+                         "password":self.tfPassword.text!]as [String:Any]
+        
         
         objWebServiceManager.requestPost(strURL: WsUrl.url_Login, queryParams: [:], params: dicrParam, strCustomValidation: "", showIndicator: false) { (response) in
             objWebServiceManager.hideIndicator()
@@ -233,7 +251,7 @@ class LoginViewController: UIViewController {
                         objAlert.showAlert(message: "Please verify your account first", controller: self)
                     }
                     
-                   
+                    
                     
                 }
             }else{

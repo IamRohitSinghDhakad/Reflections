@@ -48,7 +48,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func btnOnLoginAndHome(_ sender: Any) {
         if objAppShareData.UserDetail.email == ""{
-            pushVc(viewConterlerId: "LoginViewController")
+            objAppShareData.signOut()
+           // pushVc(viewConterlerId: "LoginViewController")
         }else{
             pushVc(viewConterlerId: "PhotoListViewController")
         }
@@ -510,10 +511,13 @@ extension HomeViewController {
                         let obj = HomeModel(from: data)
                         self.arrHomeModel.append(obj)
                     }
-                    
+                    self.tblVw.displayBackgroundText(text: "")
                     self.tblVw.reloadData()
                 }
             }else{
+                self.arrHomeModel.removeAll()
+                self.tblVw.displayBackgroundText(text: "No Data Found")
+                self.tblVw.reloadData()
                 objWebServiceManager.hideIndicator()
                 
             }

@@ -454,11 +454,13 @@ extension PhotoListViewController {
                         self.arrHomeModel.append(obj)
                     }
                     
+                    self.tblList.displayBackgroundText(text: "")
                     self.tblList.reloadData()
                 }
             }else{
                 objWebServiceManager.hideIndicator()
                 self.arrHomeModel.removeAll()
+                self.tblList.displayBackgroundText(text: "No Data Found")
                 self.tblList.reloadData()
             }
             
