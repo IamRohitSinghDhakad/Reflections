@@ -39,6 +39,9 @@
 		F9665F162C303EEC00B3473B /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9665EFF2C303EEC00B3473B /* TableViewExtension.swift */; };
 		F9665F172C303EEC00B3473B /* TimePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9665F002C303EEC00B3473B /* TimePickerManager.swift */; };
 		F98C256F2C417ABC00A50A0F /* ForgotPssswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98C256E2C417ABC00A50A0F /* ForgotPssswordViewController.swift */; };
+		F9924A302C5AAD3600D92679 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9924A2F2C5AAD3600D92679 /* ResetPasswordViewController.swift */; };
+		F9924A322C5AAEBD00D92679 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9924A312C5AAEBD00D92679 /* SettingViewController.swift */; };
+		F9924A342C5AAECE00D92679 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9924A332C5AAECE00D92679 /* SettingTableViewCell.swift */; };
 		F9D6FA002C300E24003AFFAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6F9FF2C300E24003AFFAE /* AppDelegate.swift */; };
 		F9D6FA042C300E24003AFFAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6FA032C300E24003AFFAE /* ViewController.swift */; };
 		F9D6FA072C300E24003AFFAE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F9D6FA062C300E24003AFFAE /* Base */; };
@@ -83,6 +86,9 @@
 		F9665EFF2C303EEC00B3473B /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		F9665F002C303EEC00B3473B /* TimePickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerManager.swift; sourceTree = "<group>"; };
 		F98C256E2C417ABC00A50A0F /* ForgotPssswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPssswordViewController.swift; sourceTree = "<group>"; };
+		F9924A2F2C5AAD3600D92679 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		F9924A312C5AAEBD00D92679 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		F9924A332C5AAECE00D92679 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		F9D6F9FC2C300E24003AFFAE /* Reflections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reflections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D6F9FF2C300E24003AFFAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9D6FA032C300E24003AFFAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +225,7 @@
 		F9D6FA132C3012E4003AFFAE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F9924A2F2C5AAD3600D92679 /* ResetPasswordViewController.swift */,
 				F9D6FA032C300E24003AFFAE /* ViewController.swift */,
 				F9D6FA142C3012FD003AFFAE /* LoginViewController.swift */,
 				F9D6FA162C30130F003AFFAE /* HomeViewController.swift */,
@@ -231,6 +238,8 @@
 				F98C256E2C417ABC00A50A0F /* ForgotPssswordViewController.swift */,
 				F9012D492C47FFD800D6D65B /* DetailViewController.swift */,
 				F9012D4B2C48374800D6D65B /* WebViewController.swift */,
+				F9924A312C5AAEBD00D92679 /* SettingViewController.swift */,
+				F9924A332C5AAECE00D92679 /* SettingTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -356,7 +365,9 @@
 				0A838F582C340CA4001CA1F1 /* AddImageViewController.swift in Sources */,
 				F9665F092C303EEC00B3473B /* NetworkRequest.swift in Sources */,
 				F98C256F2C417ABC00A50A0F /* ForgotPssswordViewController.swift in Sources */,
+				F9924A302C5AAD3600D92679 /* ResetPasswordViewController.swift in Sources */,
 				F9665F0A2C303EEC00B3473B /* WebServiceHelper.swift in Sources */,
+				F9924A322C5AAEBD00D92679 /* SettingViewController.swift in Sources */,
 				F9665EE62C30399700B3473B /* PhotosTableViewCell.swift in Sources */,
 				F9665F0F2C303EEC00B3473B /* CircularProgressBar.swift in Sources */,
 				F9665F132C303EEC00B3473B /* MediaPicker.swift in Sources */,
@@ -367,6 +378,7 @@
 				F9D6FA152C3012FD003AFFAE /* LoginViewController.swift in Sources */,
 				F9665F102C303EEC00B3473B /* CustomUITextField.swift in Sources */,
 				F9665F122C303EEC00B3473B /* Extensions.swift in Sources */,
+				F9924A342C5AAECE00D92679 /* SettingTableViewCell.swift in Sources */,
 				F9665F152C303EEC00B3473B /* RDTextView.swift in Sources */,
 				F9012D4C2C48374800D6D65B /* WebViewController.swift in Sources */,
 				F9665F0C2C303EEC00B3473B /* FloatRatingView.swift in Sources */,

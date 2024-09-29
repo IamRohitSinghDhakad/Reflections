@@ -25,6 +25,7 @@ class AddImageViewController: UIViewController,UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         self.imagePicker.delegate = self
         self.tfPurpose.delegate = self
         self.tfPurpose.didSelect { selectedText, index, id in

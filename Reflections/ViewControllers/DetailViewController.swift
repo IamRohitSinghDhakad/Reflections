@@ -16,13 +16,27 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imgFour: UIImageView!
     @IBOutlet weak var vwImage: UIView!
     @IBOutlet weak var imgVw: UIImageView!
+    @IBOutlet weak var vwPercentageOne: UIView!
+    @IBOutlet weak var lblPercntageOne: UILabel!
+    @IBOutlet weak var vwPercentageTwo: UIView!
+    @IBOutlet weak var lblPercentagetwo: UILabel!
+    @IBOutlet weak var imgVwBatchTwo: UIImageView!
+    @IBOutlet weak var imgVwBatchOne: UIImageView!
+    @IBOutlet weak var lblPercentageThree: UILabel!
+    @IBOutlet weak var vwPercentageThree: UIView!
+    @IBOutlet weak var imgVwBatchThree: UIImageView!
+    @IBOutlet weak var imgVwBatchFour: UIImageView!
+    @IBOutlet weak var lblPercentageFour: UILabel!
+    @IBOutlet weak var vwPercentageFour: UIView!
     
     var arrImages = [ImagesModel]()
+    var obj = HomeModel(from: [:])
     var strPurposeName = ""
     var isCOmingFrom = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.vwImage.isHidden = true
         self.addGestureRecognizers(to: imgOne)
         self.addGestureRecognizers(to: imgTwo)
@@ -30,6 +44,22 @@ class DetailViewController: UIViewController {
         self.addGestureRecognizers(to: imgFour)
         self.lblPurpose.text = "Purpose - \(strPurposeName)"
         setImages()
+        hidePercentage()
+        setPercentage()
+        
+    }
+    
+    func hidePercentage(){
+        
+        self.imgVwBatchOne.isHidden = true
+        self.imgVwBatchTwo.isHidden = true
+        self.imgVwBatchThree.isHidden = true
+        self.imgVwBatchFour.isHidden = true
+        
+        self.vwPercentageOne.isHidden = true
+        self.vwPercentageTwo.isHidden = true
+        self.vwPercentageThree.isHidden = true
+        self.vwPercentageFour.isHidden = true
         
     }
     
@@ -54,6 +84,58 @@ class DetailViewController: UIViewController {
                 imageView?.isHidden = false
             } else {
                 imageView?.isHidden = true
+            }
+        }
+    }
+    
+    func setPercentage(){
+        
+        self.lblPercntageOne.text = "\(obj.arrImages[safe: 0]?.perecentage ?? "0")%"
+        self.lblPercentagetwo.text = "\(obj.arrImages[safe: 1]?.perecentage ?? "0")%"
+        self.lblPercentageThree.text = "\(obj.arrImages[safe: 2]?.perecentage ?? "0")%"
+        self.lblPercentageFour.text = "\(obj.arrImages[safe: 3]?.perecentage ?? "0")%"
+        
+        // Check if any image has voted == 1
+        let anyImageVoted = obj.arrImages.contains { $0.voted == "1" }
+        // Set the visibility of the percentage views based on the condition
+        if anyImageVoted {
+            if obj.arrImages.count > 0 {
+                self.vwPercentageOne.isHidden = false
+            }
+            if obj.arrImages.count > 1 {
+                self.vwPercentageTwo.isHidden = false
+            }
+            if obj.arrImages.count > 2 {
+                self.vwPercentageThree.isHidden = false
+            }
+            if obj.arrImages.count > 3 {
+                self.vwPercentageFour.isHidden = false
+            }
+            
+            // Find the index of the image with the highest percentage
+            var highestPercentageIndex = 0
+            for i in 1..<obj.arrImages.count {
+                if let percentage = obj.arrImages[i].perecentage,
+                   let highestPercentage = obj.arrImages[highestPercentageIndex].perecentage,
+                   percentage > highestPercentage {
+                    highestPercentageIndex = i
+                }
+            }
+            
+            // Show batch image view based on highest percentage index
+            if highestPercentageIndex < obj.arrImages.count {
+                switch highestPercentageIndex {
+                case 0:
+                    self.imgVwBatchOne.isHidden = false
+                case 1:
+                    self.imgVwBatchTwo.isHidden = false
+                case 2:
+                    self.imgVwBatchThree.isHidden = false
+                case 3:
+                    self.imgVwBatchFour.isHidden = false
+                default:
+                    break
+                }
             }
         }
     }
@@ -90,7 +172,12 @@ class DetailViewController: UIViewController {
             if arrImages.contains(where: { $0.voted == "1" }) {
                 // At least one element has voted == "1"
             } else {
+                if objAppShareData.UserDetail.strUserId == obj.user_id{
+                    
+                }else{
                     self.call_VoteImage_Api(strImageId: arrImages[tag].image_id ?? "")
+                }
+                   
             }
         }
        

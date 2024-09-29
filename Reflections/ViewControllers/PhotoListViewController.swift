@@ -308,6 +308,7 @@ extension PhotoListViewController{
         vc.arrImages = self.arrHomeModel[indexPath.row].arrImages
         vc.strPurposeName = self.arrHomeModel[indexPath.row].purpose_name ?? ""
         vc.isCOmingFrom = self.strStatusis
+        vc.obj = self.arrHomeModel[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

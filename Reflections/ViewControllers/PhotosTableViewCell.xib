@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -138,6 +139,7 @@
                                                 <rect key="frame" x="2" y="2" width="15" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="Xy2-7C-Hw6"/>
+                                                    <constraint firstAttribute="width" secondItem="CWk-dg-tRH" secondAttribute="height" id="YsE-Mt-Dxw"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAv-Tb-Iqf">
@@ -156,7 +158,6 @@
                                             <constraint firstAttribute="trailing" secondItem="JOF-E6-T96" secondAttribute="trailing" id="QeS-Ud-o9L"/>
                                             <constraint firstItem="wAv-Tb-Iqf" firstAttribute="leading" secondItem="Hmp-8a-qDK" secondAttribute="leading" id="Wjs-UP-pQ4"/>
                                             <constraint firstAttribute="bottom" secondItem="wAv-Tb-Iqf" secondAttribute="bottom" id="X8U-zm-bCk"/>
-                                            <constraint firstItem="CWk-dg-tRH" firstAttribute="width" secondItem="CWk-dg-tRH" secondAttribute="height" id="YsE-Mt-Dxw"/>
                                             <constraint firstItem="CWk-dg-tRH" firstAttribute="leading" secondItem="Hmp-8a-qDK" secondAttribute="leading" constant="2" id="mEH-Or-TNK"/>
                                             <constraint firstItem="wAv-Tb-Iqf" firstAttribute="top" secondItem="Hmp-8a-qDK" secondAttribute="top" id="ptW-9l-Tru"/>
                                             <constraint firstItem="CWk-dg-tRH" firstAttribute="top" secondItem="Hmp-8a-qDK" secondAttribute="top" constant="2" id="yqt-VS-OCe"/>
@@ -202,6 +203,7 @@
                                                 <rect key="frame" x="2" y="2" width="15" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="BUa-02-Ruj"/>
+                                                    <constraint firstAttribute="width" secondItem="vWI-Vi-0e3" secondAttribute="height" id="bmX-im-Rmh"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekB-pQ-TqT">
@@ -215,7 +217,6 @@
                                             <constraint firstItem="Oz4-D6-IoQ" firstAttribute="top" secondItem="LCA-1L-ugj" secondAttribute="top" id="FLO-2r-gNU"/>
                                             <constraint firstItem="Oz4-D6-IoQ" firstAttribute="leading" secondItem="LCA-1L-ugj" secondAttribute="leading" id="IF2-ha-EDy"/>
                                             <constraint firstAttribute="trailing" secondItem="KTA-ew-FWD" secondAttribute="trailing" id="PIa-ug-AOq"/>
-                                            <constraint firstItem="vWI-Vi-0e3" firstAttribute="width" secondItem="vWI-Vi-0e3" secondAttribute="height" id="bmX-im-Rmh"/>
                                             <constraint firstItem="vWI-Vi-0e3" firstAttribute="leading" secondItem="LCA-1L-ugj" secondAttribute="leading" constant="2" id="fSV-CM-Ha0"/>
                                             <constraint firstAttribute="trailing" secondItem="Oz4-D6-IoQ" secondAttribute="trailing" id="frh-tq-nLO"/>
                                             <constraint firstAttribute="bottom" secondItem="KTA-ew-FWD" secondAttribute="bottom" id="ftr-9v-8Qb"/>
@@ -262,6 +263,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batch" translatesAutoresizingMaskIntoConstraints="NO" id="4GT-6a-l42">
                                                 <rect key="frame" x="2" y="2" width="15" height="15"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4GT-6a-l42" secondAttribute="height" id="5ai-2U-TWh"/>
                                                     <constraint firstAttribute="width" constant="15" id="6hj-nR-EiP"/>
                                                 </constraints>
                                             </imageView>
@@ -272,7 +274,6 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="4GT-6a-l42" firstAttribute="width" secondItem="4GT-6a-l42" secondAttribute="height" id="5ai-2U-TWh"/>
                                             <constraint firstItem="4GT-6a-l42" firstAttribute="top" secondItem="FiK-Jx-bNJ" secondAttribute="top" constant="2" id="6eW-TB-Abf"/>
                                             <constraint firstAttribute="trailing" secondItem="FVa-Qq-vUk" secondAttribute="trailing" id="Cah-jQ-Non"/>
                                             <constraint firstAttribute="bottom" secondItem="aG7-02-2Lv" secondAttribute="bottom" id="NIR-wi-ald"/>
@@ -302,7 +303,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.082352941176470587" green="0.1717129946" blue="0.2196142972" alpha="0.48999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="blue"/>
                         <constraints>
                             <constraint firstItem="Icc-Mu-NIM" firstAttribute="leading" secondItem="c6J-Uc-6j5" secondAttribute="leading" constant="8" id="DWx-f5-uQV"/>
                             <constraint firstAttribute="bottom" secondItem="E5E-lt-FbW" secondAttribute="bottom" constant="4" id="Jya-0w-qRB"/>
@@ -348,6 +349,7 @@
                 <outlet property="lblPercentageThree" destination="wIc-5i-iMR" id="g8t-C3-Nn2"/>
                 <outlet property="lblPercentageTwo" destination="XTi-JM-kxa" id="OSy-qE-ZP2"/>
                 <outlet property="lblPurpose" destination="4ck-CZ-uAG" id="sZ7-Uh-dds"/>
+                <outlet property="vwBackground" destination="c6J-Uc-6j5" id="hJe-Pu-QVA"/>
                 <outlet property="vwPercentageOne" destination="wnL-lV-vE6" id="REp-Y8-8Ym"/>
                 <outlet property="vwPercentageThree" destination="KTA-ew-FWD" id="L3f-YN-JyX"/>
                 <outlet property="vwPercentageTwo" destination="33k-Wz-ydS" id="TMb-MT-ZkQ"/>
@@ -360,5 +362,8 @@
         <image name="arrow" width="10.666666984558105" height="17.333333969116211"/>
         <image name="batch" width="20.333333969116211" height="24"/>
         <image name="image" width="89.333335876464844" height="90"/>
+        <namedColor name="blue">
+            <color red="0.096000000834465027" green="0.19499999284744263" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

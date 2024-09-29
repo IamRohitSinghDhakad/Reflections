@@ -28,6 +28,8 @@ struct WsUrl{
     static let url_AddUserImage = BASE_URL + "add_user_images"
     static let url_deleteAlbum = BASE_URL + "delete_user_image"
     static let url_VoteImage = BASE_URL + "save_in_favorite"
+    static let url_ChangePassword = BASE_URL + "change_password"
+    static let url_delete_user_account = BASE_URL + "delete_user_account"
     
 }
 

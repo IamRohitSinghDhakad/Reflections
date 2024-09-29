@@ -27,6 +27,7 @@ class LoginViewController: UIViewController {
         self.vwPolicy.isHidden = true
         self.vwDontHaveaccount.isHidden = true
         self.vwResendLink.isHidden = true
+        hideKeyboardWhenTappedAround()
     }
     @IBAction func btnResendLink(_ sender: Any) {
         self.call_CheckProfile_Api(status: "1")
@@ -73,7 +74,7 @@ class LoginViewController: UIViewController {
                 if self.tfPassword.text == ""{
                     objAlert.showAlert(message: "Please enter password first", controller: self)
                 }else if isValidPassword(self.tfPassword.text!) == false{
-                    objAlert.showAlert(message: "Password must be at least 6 characters", controller: self)
+                    objAlert.showAlert(message: "Password must be at least eight with a capital letter and a special character", controller: self)
                 }else{
                     self.call_SignUp_Api()
                 }
@@ -82,7 +83,7 @@ class LoginViewController: UIViewController {
                 if self.tfPassword.text == ""{
                     objAlert.showAlert(message: "Please enter password first", controller: self)
                 }else if isValidPassword(self.tfPassword.text!) == false{
-                    objAlert.showAlert(message: "Password must be at least 6 characters", controller: self)
+                    objAlert.showAlert(message: "Password must be at least eight with a capital letter and a special character", controller: self)
                 }else{
                     self.call_Login_Api()
                 }
@@ -101,9 +102,13 @@ class LoginViewController: UIViewController {
             return emailTest.evaluate(with: email)
         }
 
-        func isValidPassword(_ password: String) -> Bool {
-            return password.count >= 6
-        }
+    func isValidPassword(_ password: String) -> Bool {
+        // Regular expression to check for at least one uppercase letter, one special character, and at least 8 characters long
+        let passwordRegex = "^(?=.*[A-Z])(?=.*[!@#$&*]).{8,}$"
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        return passwordTest.evaluate(with: password)
+    }
+
     
     func call_CheckProfile_Api(status: String){
         
@@ -250,13 +255,10 @@ class LoginViewController: UIViewController {
                     }else{
                         objAlert.showAlert(message: "Please verify your account first", controller: self)
                     }
-                    
-                    
-                    
                 }
             }else{
                 objWebServiceManager.hideIndicator()
-                
+                objAlert.showAlert(message: response["result"]as! String, controller: self)
                 
             }
             

@@ -31,6 +31,7 @@ class PhotosTableViewCell: UITableViewCell {
     @IBOutlet weak var imgVwBatchThree: UIImageView!
     @IBOutlet weak var imgVwBatchTwo: UIImageView!
     @IBOutlet weak var imgVwBatchFour: UIImageView!
+    @IBOutlet weak var vwBackground: UIView!
     
     
     override func awakeFromNib() {
