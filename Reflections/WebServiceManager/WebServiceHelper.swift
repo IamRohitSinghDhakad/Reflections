@@ -10,7 +10,8 @@ import UIKit
 
 
 
-let BASE_URL = "https://ambitious.in.net/Shubham/reflections/index.php/api/"//Local
+//let BASE_URL = "https://ambitious.in.net/Shubham/reflections/index.php/api/"//Local
+let BASE_URL = "https://reflectionsappus.com/index.php/api/"
 
 
 struct WsUrl{
